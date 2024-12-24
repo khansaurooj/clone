@@ -1,0 +1,58 @@
+.btn-add-bag{
+    width: 130px;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #2f040462; /* Red */
+    color: black;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    height:auto;
+    width: 600px;
+    font-weight: 700;
+  }
+  .alert:hover{
+    color:rgb(4, 75, 180);
+
+  }
+  
+  /* The close button */
+  .closebtn {
+    color: black;
+    font-weight: bold;
+    float: right;
+    font-size: 40px;
+    line-height: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    
+  }
+  .closebtn:hover {
+    transform: scale(1.1);
+    color: rgba(18, 69, 92, 0.891);
+  }
+  .contain2{
+        margin-top: 30px;
+        margin-left: 30px;
+  }
+
+  hr {
+    width:300px;
+    border: none;
+    border: 1px solid black;
+    margin: 20px 0;
+}
+.place-order{
+  background-color: #e11575eb;
+  border: none ;
+  font-size: large;
+  color: aliceblue;
+  width: 400px;
+  height: 30px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}

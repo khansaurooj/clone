@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Form</title>
+    <style>
+        /* Center the form on the page */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150vh;
+            margin: 0;
+            background-size: cover; /* Ensure the background covers the entire page */
+            background-position: center; /* Center the background image */
+            transition: background-image 1s ease-in-out; /* Smooth transition between images */
+        }
+
+        /* Form container styling */
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+            padding: 20px;
+            border: 1px solid #ccc; /* Light border */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            width: 400px; /* Fixed width */
+            text-align: center; /* Center text */
+        }
+
+        /* Input fields styling */
+        input[type="text"], input[type="email"] {
+            width: calc(100% - 20px); /* Full width minus padding */
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        /* Submit button styling */
+        button {
+            background-color: #007bff; /* Blue button */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        /* Heading styling */
+        h1 {
+            color: #333; /* Dark gray */
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="form-container">
+    <h1>Submit Your Information</h1>
+    <form action="/formSuccess" method="post">
+        <label for="id">Id:</label><br>
+        <input type="text" id="id" name="id" required><br>
+
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<script>
+    // Array of background images
+    const images = ["b1.jpg", "b2.jpg","b3.jpg", "b4.jpg","b5.jpg"];
+    let currentIndex = 0;
+
+    // Function to change the background image
+    function changeBackground() {
+        document.body.style.backgroundImage = `url(${images[currentIndex]})`;
+        currentIndex = (currentIndex + 1) % images.length; // Loop back to the first image
+    }
+
+    // Initial background set
+    changeBackground();
+
+    // Change the background every second
+    setInterval(changeBackground, 1000);
+</script>
+</body>
+</html>
